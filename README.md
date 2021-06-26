@@ -41,8 +41,17 @@ mkdir .config
 I realized how much time it will take to *individually describe* how to install each *rc file, so here is an overview:
 
 1. For whichever program I'm talking about, navigate to the .config directory and use `mkdir` to create a directory of the same name shown in my repo.
-2. Run `vim filename` to create and open up a file with the same name as described in my repo.
-3. Copy and paste the text from my file to yours, done. 
+2. Either:
+	1. Run `vim filename` to create and open up a file with the same name as described in my repo.
+	2. Copy and paste the text from my file to yours, done. 
+3. Or:
+	1. Download the file from this repo and move it to the proper directory.
+
+---
+
+### Iterm2
+
+I wrote it's own guide [here](https://github.com/Blugil/dotfiles/tree/master/.config/iterm2) as part of this repo if you'd like to exactly replicate the way my terminal looks in the post.
 
 ---
 
