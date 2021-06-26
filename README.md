@@ -73,12 +73,7 @@ chsh -s $(which zsh)
 
 #### The 'shell' folder
 This contains my `aliasrc` and `functionrc` files that hold my...aliases and functions (crazy, I know).
-Install them like I described in the beginning, nothing fancy. Most aliases I have should work minus:
-1. Neofetch (unless you have it installed)
-2. cdff 
-3. cfg
-4. cfv
-> It's not guaranteed these wont work, just that they involve things I didn't talk about in this "tutorial".
+Install them like I described in the beginning, nothing fancy. Most aliases I have should work.
 
 ---
 
@@ -101,16 +96,18 @@ In order to really take advantage of powerline10k you'll need to install a nerd 
 ### Neovim
 My neovim setup is *not* good, at all. If you want a really good one and aren't just looking to yoink my theme, use a [brokenbyte's](https://gitlab.com/brokenbyte/dotfiles/-/tree/master/dot_config/nvim). This man knows what he's doing way more than I do.
 
-First, install neovim:
+Install neovim:
+
 ```sh
 brew install neovim
 ```
+
 #### Vim-plug
 Plugin manager for vim (and neovim), install like so:
+
 ```sh
 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 ```
-
 So long as you have the init.vim file setup, all thats left is go enter neovim by running `nvim` and then type:
 
 ```
