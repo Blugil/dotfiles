@@ -102,6 +102,8 @@ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$
 ```
 In order to really take advantage of powerline10k you'll need to install a nerd font. As described earlier I use Meslo LGS for everything and I love it. Install it however you wish.
 
+---
+
 ### Neovim
 My neovim setup is *not* good, at all. If you want a really good one and aren't just looking to yoink my theme, use a [brokenbyte's](https://gitlab.com/brokenbyte/dotfiles/-/tree/master/dot_config/nvim). This man knows what he's doing way more than I do.
 
@@ -122,6 +124,7 @@ So long as you have the init.vim file setup, all thats left is go enter neovim b
 ```
 :PlugInstall
 ```
+---
 
 ### Yabai & Skhd
 > These are coupled together because yabai *requires* shkd to manage the hotkeys. I use yabai with SIP *enabled*, if you'd like to disable it follow the guide on their github page.
