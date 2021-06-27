@@ -19,8 +19,12 @@ spacebar -m config padding_left         20
 spacebar -m config padding_right        20
 spacebar -m config spacing_left         25
 spacebar -m config spacing_right        15
-spacebar -m config text_font            "MelsoLGS NF:Bold:13.0"
-spacebar -m config icon_font            "Font Awesome 5 Free:Solid:13.0"
+spacebar -m config text_font            "MesloLGS NF:Regular:13.0"
+spacebar -m config icon_font            "MesloLGS NF:Regular:13.0"
+spacebar -m config right_shell          on
+spacebar -m config right_shell_command  "whoami"
+spacebar -m config right_shell_icon     
+spacebar -m config right_shell_icon_color 0xffebdbb2
 spacebar -m config background_color     0xff282828
 spacebar -m config foreground_color     0xffebdbb2
 spacebar -m config space_icon_color     0xfffb4934
@@ -34,9 +38,5 @@ spacebar -m config space_icon           
 spacebar -m config clock_icon           
 spacebar -m config dnd_icon             
 spacebar -m config clock_format         "%d/%m/%y %R"
-spacebar -m config right_shell          on
-spacebar -m config right_shell_command  "whoami"
-spacebar -m config right_shell_icon     
-spacebar -m config right_shell_icon_color 0xffebdbb2
 
 echo "spacebar configuration loaded.."
