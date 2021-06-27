@@ -24,7 +24,6 @@ This is a list of the programs we'll be installing and dependencies to get every
 - [neovim](https://neovim.io/)
 - [yabai](https://github.com/koekeishiya/yabai) & [skhd](https://github.com/koekeishiya/skhd)
 - [lf](https://github.com/gokcehan/lf)
-- [fontawesome](https://fontawesome.com/v5.15/how-to-use/on-the-desktop/setup/getting-started)
 - [spacebar](https://github.com/cmacrae/spacebar)
 
 > Note: These dotfiles are for my *Mac* and thus uses programs that will not work out of the box on other systems. 
