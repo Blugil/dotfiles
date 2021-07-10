@@ -38,6 +38,7 @@ This is a list of the programs we'll be installing and dependencies to get every
 - [yabai](https://github.com/koekeishiya/yabai) & [skhd](https://github.com/koekeishiya/skhd)
 - [lf](https://github.com/gokcehan/lf)
 - [spacebar](https://github.com/cmacrae/spacebar)
+- [fzf](https://github.com/junegunn/fzf)
 
 
 ---
