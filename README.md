@@ -11,14 +11,13 @@ Managed with [yadm](https://yadm.io)
 
 ## Continued Goals:
 
-- [ ] revamping neovim config
+- [x] switch to kitty
 - [ ] make fzf ignore results like .DS_Store, .git, /node_modules, etc.
-- [ ] video tutorial
+- [ ] revamping neovim config
 - [ ] vscode settings
-- [ ] switch to kitty
 - [ ] add tmux to workflow
 - [ ] switch to zinit over ohmyzsh
-
+- [ ] video tutorial
 
 ---
 
