@@ -9,6 +9,19 @@ Managed with [yadm](https://yadm.io)
 
 ---
 
+## Continued Goals:
+
+- [ ] revamping neovim config
+- [ ] make fzf ignore results like .DS_Store, .git, /node_modules, etc.
+- [ ] video tutorial
+- [ ] vscode settings
+- [ ] switch to kitty
+- [ ] add tmux to workflow
+- [ ] switch to zinit over ohmyzsh
+
+
+---
+
 ## Programs and Dependencies
 This is a list of the programs we'll be installing and dependencies to get everything working as intended. If something isn't here I'll add it.
 
