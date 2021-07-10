@@ -69,5 +69,9 @@ bindkey '^e' edit-command-line
 
 # Sources
 
+[ -f ~/.config/fzf/fzf.zsh ] && source ~/.config/fzf/fzf.zsh
+[ -f ~/.config/fzf/fzf_options.zsh ] && source ~/.config/fzf/fzf_options.zsh
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
 source ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/local/opt/powerlevel10k/powerlevel10k.zsh-theme
