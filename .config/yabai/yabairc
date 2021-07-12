@@ -35,6 +35,10 @@ yabai -m rule --add app="^Discord$" manage=off
 yabai -m rule --add app="^Messages$" manage=off
 yabai -m rule --add app="^Zoom$" manage=off
 yabai -m rule --add app="^Preview$" manage=off
+yabai -m rule --add title="^Opening .*$" manage=off layer=above
+
+# Concept: allow for properly changing focus on displays without moving the mouse every time you focus a window, doesn't work.
+# yabai -m rule --add app="^.*$" mouse_follows_focus=off
 
 # global settings
 yabai -m config status_bar                   on
