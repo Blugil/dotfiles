@@ -13,7 +13,12 @@ Managed with [yadm](https://yadm.io)
 
 - [x] switch to kitty
 - [ ] make fzf ignore results like .DS_Store, .git, /node_modules, etc.
-- [ ] revamping neovim config
+- [x] revamping neovim config
+    - switched to lua
+    - modularized everything (keybinds/plugins)
+    - switched to packer over vim-plug
+    - added LSP and autocompletion
+    - setup for: lua, c/c++, python
 - [ ] vscode settings
 - [ ] add tmux to workflow
 - [ ] switch to zinit over ohmyzsh
@@ -32,7 +37,7 @@ This is a list of the programs we'll be installing and dependencies to get every
 - [zsh](https://www.zsh.org/)
 - [oh-my-zsh](https://github.com/ohmyzsh/ohmyzsh) (I know, don't laugh)
 - [powerline10k](https://github.com/romkatv/powerlevel10k)
-- [vim-plug](https://github.com/junegunn/vim-plug)
+- [packer](https://github.com/wbthomason/packer.nvim)
 - [neovim](https://neovim.io/)
 - [yabai](https://github.com/koekeishiya/yabai) & [skhd](https://github.com/koekeishiya/skhd)
 - [lf](https://github.com/gokcehan/lf)
@@ -50,7 +55,6 @@ I believe in the $XDG_CONFIG_HOME philosophy of cleaning your home directory. St
 mkdir .config
 ```
 #### Overview for setup:
-
 1. For whichever program I'm talking about, navigate to the .config directory and use `mkdir` to create a directory of the same name shown in my repo.
 2. Either:
 	1. Create and open up a file with the same name as described in my repo.
@@ -101,11 +105,13 @@ Install neovim:
 brew install neovim
 ```
 
-#### Vim-plug
+#### Packer
 Plugin manager for vim (and neovim), install like so:
 
 ```sh
-sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+git clone https://github.com/wbthomason/packer.nvim\
+ ~/.local/share/nvim/site/pack/packer/start/packer.nvim
+
 ```
 ---
 
