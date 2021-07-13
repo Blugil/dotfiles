@@ -1,5 +1,6 @@
 vim.cmd("colorscheme gruvbox")
 
+local nvim_lsp = require('lspconfig')
 local on_attach = function(client, bufnr)
   local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
   local function buf_set_option(...) vim.api.nvim_buf_set_option(bufnr, ...) end
@@ -52,14 +53,61 @@ local function setup_servers()
         config.filetypes = {"c", "cpp"}; -- we don't want objective-c and objective-cpp!
     end
 
+    if server == "pyright" then
+        config.filetypes = {"py"};
+    end
+
     require'lspconfig'[server].setup{}
   end
 end
 
 setup_servers()
 
+
 -- Automatically reload after `:LspInstall <server>` so we don't have to restart neovim
 require'lspinstall'.post_install_hook = function ()
   setup_servers() -- reload installed servers
   vim.cmd("bufdo e") -- this triggers the FileType autocmd that starts the server
 end
+local signs = { Error = " ", Warning = " ", Hint = " ", Information = " " }
+
+for type, icon in pairs(signs) do
+  local hl = "LspDiagnosticsSign" .. type
+  vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
+end
+
+require('compe').setup {
+  enabled = true;
+  autocomplete = true;
+  debug = false;
+  min_length = 1;
+  preselect = 'enable';
+  throttle_time = 80;
+  source_timeout = 200;
+  resolve_timeout = 800;
+  incomplete_delay = 400;
+  max_abbr_width = 100;
+  max_kind_width = 100;
+  max_menu_width = 100;
+  documentation = {
+    border = { '', '' ,'', ' ', '', '', '', ' ' }, -- the border option is the same as `|help nvim_open_win|`
+    winhighlight = "NormalFloat:CompeDocumentation,FloatBorder:CompeDocumentationBorder",
+    max_width = 120,
+    min_width = 60,
+    max_height = math.floor(vim.o.lines * 0.3),
+    min_height = 1,
+  };
+
+  source = {
+    path = true;
+    buffer = true;
+    calc = true;
+    nvim_lsp = true;
+    nvim_lua = true;
+    vsnip = true;
+    ultisnips = true;
+    luasnip = true;
+  };
+}
+
+vim.cmd("let g:nvim_tree_ignore = ['.git', 'node_modules']")
