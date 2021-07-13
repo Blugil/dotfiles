@@ -32,13 +32,13 @@ This is a list of the programs we'll be installing and dependencies to get every
 > Note: These dotfiles are for my *MacOS Computer* and thus uses programs that will not work out of the box on other systems. 
 
 - [MesloLGS NF](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/Meslo) (I'm not sure if this is correct, I'll fix if not)
-- [iterm2](https://iterm2.com/)
+- [kitty](https://sw.kovidgoyal.net/kitty/)
 - [homebrew](https://hombrew.sh)
 - [zsh](https://www.zsh.org/)
 - [oh-my-zsh](https://github.com/ohmyzsh/ohmyzsh) (I know, don't laugh)
 - [powerline10k](https://github.com/romkatv/powerlevel10k)
 - [packer](https://github.com/wbthomason/packer.nvim)
-- [neovim](https://neovim.io/)
+- [neovim v0.5.0](https://neovim.io/)
 - [yabai](https://github.com/koekeishiya/yabai) & [skhd](https://github.com/koekeishiya/skhd)
 - [lf](https://github.com/gokcehan/lf)
 - [spacebar](https://github.com/cmacrae/spacebar)
@@ -65,18 +65,27 @@ mkdir .config
 
 ---
 
-### Iterm2
-
-I wrote it's own guide [here](https://github.com/Blugil/dotfiles/tree/master/.config/iterm2) as part of this repo if you'd like to exactly replicate the way my terminal looks in the post.
-
----
-
 ### Homebrew
 
 To download homebrew, run this command: 
 ```sh
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
+---
+
+### Kitty
+> Relies on: MesloLGS
+
+```sh
+brew install --cask kitty
+```
+
+---
+
+### Iterm2 (Depreciated)
+
+I wrote it's own guide [here](https://github.com/Blugil/dotfiles/tree/master/.config/iterm2) as part of this repo if you'd like to exactly replicate the way my terminal looks in the post.
+
 ---
 
 ### Oh-my-zsh
@@ -106,7 +115,7 @@ brew install neovim
 ```
 
 #### Packer
-Plugin manager for vim (and neovim), install like so:
+Plugin manager for neovim v0.5.0, install like so:
 
 ```sh
 git clone https://github.com/wbthomason/packer.nvim\
