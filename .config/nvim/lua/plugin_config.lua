@@ -1,10 +1,9 @@
-vim.cmd("colorscheme gruvbox")
-
+-- LSP related config
 local nvim_lsp = require('lspconfig')
 local on_attach = function(client, bufnr)
   local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
   local function buf_set_option(...) vim.api.nvim_buf_set_option(bufnr, ...) end
-
+    
   buf_set_option('omnifunc', 'v:lua.vim.lsp.omnifunc')
 
   -- Mappings.
@@ -24,7 +23,6 @@ local on_attach = function(client, bufnr)
   buf_set_keymap('n', '[d', '<cmd>lua vim.lsp.diagnostic.goto_prev()<CR>', opts)
   buf_set_keymap('n', ']d', '<cmd>lua vim.lsp.diagnostic.goto_next()<CR>', opts)
   buf_set_keymap('n', '<space>q', '<cmd>lua vim.lsp.diagnostic.set_loclist()<CR>', opts)
-
   -- Set some keybinds conditional on server capabilities
   if client.resolved_capabilities.document_formatting then
     buf_set_keymap("n", "<space>f", "<cmd>lua vim.lsp.buf.formatting()<CR>", opts)
@@ -44,11 +42,11 @@ local on_attach = function(client, bufnr)
   end
 end
 
+
 local function setup_servers()
   require'lspinstall'.setup()
-  local servers = require'lspinstall'.installed_servers()
+  local servers = require('lspinstall').installed_servers()
   for _, server in pairs(servers) do
-
     if server == "clangd" then
         config.filetypes = {"c", "cpp"}; -- we don't want objective-c and objective-cpp!
     end
@@ -56,8 +54,7 @@ local function setup_servers()
     if server == "pyright" then
         config.filetypes = {"py"};
     end
-
-    require'lspconfig'[server].setup{}
+    require'lspconfig'[server].setup{ on_attach = on_attach}
   end
 end
 
@@ -76,6 +73,7 @@ for type, icon in pairs(signs) do
   vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
 end
 
+-- compe related config
 require('compe').setup {
   enabled = true;
   autocomplete = true;
@@ -110,4 +108,7 @@ require('compe').setup {
   };
 }
 
-vim.cmd("let g:nvim_tree_ignore = ['.git', 'node_modules']")
+require('nvim-web-devicons').get_icons()
+
+-- very small nvim-tree related config
+vim.cmd("let g:nvim_tree_ignore = ['.DS_Store', '.git', 'node_modules']")
