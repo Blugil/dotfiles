@@ -4,9 +4,11 @@ return require('packer').startup(function()
 
 	use 'junegunn/fzf.vim'
 
-	use 'hrsh7th/nvim-compe'
+	--use 'hrsh7th/nvim-compe'
+    use 'nvim-lua/completion-nvim'
     use 'neovim/nvim-lspconfig'
     use 'kabouzeid/nvim-lspinstall'
+    use 'folke/lsp-colors.nvim'
 
     use 'kyazdani42/nvim-web-devicons'
     use 'kyazdani42/nvim-tree.lua'
