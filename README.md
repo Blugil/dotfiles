@@ -106,7 +106,7 @@ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$
 ---
 
 ### Neovim
-If you want a really good one and aren't just looking to yoink my theme, use a [brokenbyte's](https://gitlab.com/brokenbyte/dotfiles/-/tree/master/dot_config/nvim). This man knows what he's doing way more than I do.
+Inspired by [brokenbyte's](https://gitlab.com/brokenbyte/dotfiles/-/tree/master/dot_config/nvim).
 
 Install neovim:
 
