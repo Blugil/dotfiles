@@ -26,6 +26,10 @@ vim.o.expandtab=true
 
 vim.o.smartcase=true
 
+vim.o.cursorline=true
+
+vim.o.colorcolumn="99999"
+
 vim.o.swapfile=false
 
 vim.o.backup=false

@@ -59,11 +59,55 @@ local function setup_servers()
     if server == "pyright" then
         config.filetypes = {"py"};
     end
-    require'lspconfig'[server].setup{ on_attach = require('completion').on_attach }
+    require'lspconfig'[server].setup{ on_attach = on_attach }
   end
 end
 
 setup_servers()
+
+
+
+require('compe').setup {
+  enabled = true;
+  autocomplete = true;
+  debug = false;
+  min_length = 1;
+  preselect = 'enable';
+  throttle_time = 80;
+  source_timeout = 200;
+  incomplete_delay = 400;
+  max_abbr_width = 100;
+  max_kind_width = 100;
+  max_menu_width = 100;
+  documentation = true;
+
+  source = {
+    omni = true;
+    path = true;
+    buffer = true;
+    calc = true;
+    nvim_lsp = true;
+    nvim_lua = true;
+    ultisnips = true;
+    emoji = false;
+    -- vim_dadbod_completion = true;
+  };
+}
+
+require'nvim-treesitter.configs'.setup {
+  highlight = {
+    enable = true,
+    custom_captures = {
+      -- Highlight the @foo.bar capture group with the "Identifier" highlight group.
+      -- ["foo.bar"] = "Identifier",
+    },
+    -- Setting this to true will run `:h syntax` and tree-sitter at the same time.
+    -- Set this to `true` if you depend on 'syntax' being enabled (like for indentation).
+    -- Using this option may slow down your editor, and you may see some duplicate highlights.
+    -- Instead of true it can also be a list of languages
+    additional_vim_regex_highlighting = false,
+  },
+}
 
 
 protocol.CompletionItemKind = {
