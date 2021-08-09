@@ -23,7 +23,6 @@ export EDITOR=nvim
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="agnoster"
 
 # History in cache directory
 HISTSIZE=10000
@@ -51,13 +50,10 @@ compinit -d ~/.cache/zsh/zcompdump-$ZSH_VERSION
 
 # Import functions
 
-[ -f "${XDG_CONFIG_HOME:-$HOME/.config}/shell/functionrc" ] && source "${XDG_CONFIG_HOME:-$HOME/.config}/shell/functionrc" && bindkey -s '^o' 'lfcd\n'
- 
+[ -f "${XDG_CONFIG_HOME:-$HOME/.config}/shell/functionrc" ] && source "${XDG_CONFIG_HOME:-$HOME/.config}/shell/functionrc" && bindkey -s '^o' 'lfcd\n' && bindkey -s '^h' 'fzfhist\n'
+
 # Import aliases from aliasrc
 [ -f "${XDG_CONFIG_HOME:-$HOME/.config}/shell/aliasrc" ] && source "${XDG_CONFIG_HOME:-$HOME/.config}/shell/aliasrc"
-
-# CSE 365 (school related login)
-[ -f "~/.logins/wechall" ] && source "~/.logins/wechall"
 
 # Edit line in vim with ctrl-e:
 autoload edit-command-line; zle -N edit-command-line
