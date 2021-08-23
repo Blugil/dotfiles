@@ -7,7 +7,7 @@ local on_attach = function(client, bufnr)
 
     -- Enable completion triggered by <c-x><c-o> (overridden by nvim-completion)
     buf_set_option('omnifunc', 'v:lua.vim.lsp.omnifunc')
-
+    
     -- Mappings.
     local opts = { noremap=true, silent=true }
     buf_set_keymap('n', 'gD', '<Cmd>lua vim.lsp.buf.declaration()<CR>', opts)
@@ -94,20 +94,12 @@ require('compe').setup {
   };
 }
 
-require'nvim-treesitter.configs'.setup {
-  highlight = {
-    enable = true,
-    custom_captures = {
-      -- Highlight the @foo.bar capture group with the "Identifier" highlight group.
-      -- ["foo.bar"] = "Identifier",
-    },
-    -- Setting this to true will run `:h syntax` and tree-sitter at the same time.
-    -- Set this to `true` if you depend on 'syntax' being enabled (like for indentation).
-    -- Using this option may slow down your editor, and you may see some duplicate highlights.
-    -- Instead of true it can also be a list of languages
-    additional_vim_regex_highlighting = false,
-  },
-}
+
+--require'nvim-treesitter.configs'.setup {
+--  highlight = {
+--    enable = true,
+--  },
+--}
 
 
 protocol.CompletionItemKind = {

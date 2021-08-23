@@ -9,10 +9,9 @@ return require('packer').startup(function()
     use 'neovim/nvim-lspconfig'
     use 'kabouzeid/nvim-lspinstall'
     use 'folke/lsp-colors.nvim'
-    use {
-            'nvim-treesitter/nvim-treesitter',
-            run = ':TSUpdate'
-        }
+
+    -- don't like the color highlights compared to vscode
+    -- use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
     
     use "lukas-reineke/indent-blankline.nvim"
     use 'kyazdani42/nvim-web-devicons'
@@ -20,8 +19,12 @@ return require('packer').startup(function()
 
     use 'vim-airline/vim-airline'
     use 'vim-airline/vim-airline-themes'
-    use 'morhetz/gruvbox'
 
+    --using different gruv theme for now
+    use 'morhetz/gruvbox'
+    --
+    -- use {"npxbr/gruvbox.nvim", requires = {"rktjmp/lush.nvim"}}
+    
     use 'ap/vim-css-color'
 
     use 'tpope/vim-markdown'

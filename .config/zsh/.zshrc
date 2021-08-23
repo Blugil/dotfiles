@@ -48,8 +48,7 @@ _comp_options+=(globdots)
 # Moves .zcompdump-* files to cache directory
 compinit -d ~/.cache/zsh/zcompdump-$ZSH_VERSION
 
-# Import functions
-
+# Import functions and keybind
 [ -f "${XDG_CONFIG_HOME:-$HOME/.config}/shell/functionrc" ] && source "${XDG_CONFIG_HOME:-$HOME/.config}/shell/functionrc" && bindkey -s '^o' 'lfcd\n' && bindkey -s '^h' 'fzfhist\n'
 
 # Import aliases from aliasrc

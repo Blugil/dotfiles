@@ -19,7 +19,7 @@ vnoremap > >gv
 " tab through buffers
 nnoremap <TAB> :bnext<CR>
 nnoremap <S-TAB> :bprevious<CR>
-
+nnoremap <c-BS> :bd<CR>
 " nvim-completion related settings
 " Use <Tab> and <S-Tab> to navigate through popup menu
 inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
