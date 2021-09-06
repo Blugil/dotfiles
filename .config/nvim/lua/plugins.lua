@@ -26,10 +26,22 @@ return require('packer').startup(function()
     -- use {"npxbr/gruvbox.nvim", requires = {"rktjmp/lush.nvim"}}
     
     use 'ap/vim-css-color'
+    
+    use {
+        'xuhdev/vim-latex-live-preview',
+        ft = {'tex'}
+    }
 
+    use {
+        'lervag/vimtex',
+        ft = {'tex'}
+    }
+
+    
     use 'tpope/vim-markdown'
     use { 
         'iamcco/markdown-preview.nvim',
+        ft = { 'markdown' },
         run = 'cd app && yarn install'  
     }
 

@@ -16,3 +16,10 @@ alias cfsb="nvim ~/.config/spacebar/spacebarrc"
 alias cfk="nvim ~/.config/kitty/kitty.conf"
 alias cfnvplugin="nvim ~/.config/nvim/lua/plugins.lua"
 alias c="clear"
+
+
+# programming specific
+
+alias gcc="gcc-11"
+alias g++="g++-11"
+

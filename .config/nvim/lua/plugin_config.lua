@@ -56,6 +56,10 @@ local function setup_servers()
         config.filetypes = {"c", "cpp"}; -- we don't want objective-c and objective-cpp!
     end
 
+    if server == "texlab" then
+        config.filetypes = {"tex"};
+    end
+
     if server == "pyright" then
         config.filetypes = {"py"};
     end
