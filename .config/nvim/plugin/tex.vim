@@ -13,4 +13,4 @@ let g:vimtex_view_general_viewer = '/Applications/Skim.app/Contents/SharedSuppor
 let g:vimtex_view_general_options = '-r @line @pdf @tex'
 let g:vimtex_view_general_options_latexmk = '-r 1'
 
-map <Leader>t :w<CR><bar><Leader>ll
+autocmd FileType text map <Leader>t :w<CR><bar><Leader>ll
