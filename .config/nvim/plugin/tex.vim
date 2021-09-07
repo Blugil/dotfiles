@@ -5,7 +5,7 @@ let g:vimtex_quickfix_mode=0
 set conceallevel=1
 let g:tex_conceal='abdmg'
 
-autocmd FileType tex nmap <buffer> <C-T> :!latexmk -pvc -pdf %<CR>
+autocmd FileType tex nmap <buffer> <C-T> :!tectonic -pvc -pdf %<CR>
 
 let g:livepreview_previewer = 'skim'
 
@@ -13,5 +13,4 @@ let g:vimtex_view_general_viewer = '/Applications/Skim.app/Contents/SharedSuppor
 let g:vimtex_view_general_options = '-r @line @pdf @tex'
 let g:vimtex_view_general_options_latexmk = '-r 1'
 
-
-
+map <Leader>t :w<CR><bar><Leader>ll

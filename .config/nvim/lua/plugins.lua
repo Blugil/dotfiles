@@ -20,24 +20,15 @@ return require('packer').startup(function()
     use 'vim-airline/vim-airline'
     use 'vim-airline/vim-airline-themes'
 
-    --using different gruv theme for now
     use 'morhetz/gruvbox'
-    --
-    -- use {"npxbr/gruvbox.nvim", requires = {"rktjmp/lush.nvim"}}
     
     use 'ap/vim-css-color'
     
-    use {
-        'xuhdev/vim-latex-live-preview',
-        ft = {'tex'}
-    }
-
     use {
         'lervag/vimtex',
         ft = {'tex'}
     }
 
-    
     use 'tpope/vim-markdown'
     use { 
         'iamcco/markdown-preview.nvim',
