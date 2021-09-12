@@ -3,7 +3,7 @@
 These are the dotfiles configured to match [this reddit post](https://www.reddit.com/r/unixporn/comments/o6j9hj/yabaimacos_eat_breath_sleep_gruvbox/?utm_source=share&utm_medium=web2x&context=3).
 
 This is a constant rough draft and will always be updated, tread carefully.
-There are many like them, but these are mine (and they're bad).
+There are many like them, but these are mine (and they're bad). I actually try to keep these files in working order ready to download however if you clone my whole dotfiles repo and stuff doesn't work out of the box that is due to my inexperience as a maintainer. Shoot me an issue and I will try and help.
 
 Managed with [yadm](https://yadm.io)
 
@@ -12,16 +12,16 @@ Managed with [yadm](https://yadm.io)
 ## Continued Goals:
 
 - [x] switch to kitty
-- [ ] make fzf ignore results like .DS_Store, .git, /node_modules, etc.
 - [x] revamping neovim config
     - switched to lua
     - modularized everything (keybinds/plugins)
     - switched to packer over vim-plug
     - added LSP and autocompletion
-    - setup for: lua, c/c++, python
-- [ ] vscode settings
-- [ ] add tmux to workflow
+    - setup for: latex, c/c++, python
+- [x] setup LaTeX note taking with "live" (not supported with tectonic) updates
 - [ ] switch to zinit over ohmyzsh
+- [ ] add tmux to workflow
+- [ ] make fzf ignore results like .DS_Store, .git, /node_modules, etc.
 - [ ] video tutorial
 
 ---
@@ -43,6 +43,8 @@ This is a list of the programs we'll be installing and dependencies to get every
 - [lf](https://github.com/gokcehan/lf)
 - [spacebar](https://github.com/cmacrae/spacebar)
 - [fzf](https://github.com/junegunn/fzf)
+- [skim](https://skim-app.sourceforge.io/)
+- [tectonic](https://tectonic-typesetting.github.io/en-US/)
 
 
 ---
@@ -160,4 +162,21 @@ brew install cmacrae/formulae/spacebar
 
 ---
 
+### Skim
+Install by:
+
+```sh
+brew install --cask skim
+```
+
+---
+
+### Tectonic
+Install by:
+
+```sh
+brew install tectonic
+```
+
+---
 Holy sh*t, you're done! If you have any questions please let me know and I will be sure to answer.
